@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas Profesional</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="contenedor-tareas">
+        <h1>Gestor de Tareas</h1>
+        
+        <div class="formulario-input">
+            <input type="text" id="input-tarea" placeholder="Escribe una nueva tarea...">
+            <button id="boton-agregar">Agregar</button>
+        </div>
+
+        <div id="alerta-error" class="alerta">
+            </div>
+
+        <div class="panel-control">
+            <div class="filtros">
+                <button class="filtro activo" id="filtro-todas">Todas</button>
+                <button class="filtro" id="filtro-pendientes">Pendientes</button>
+                <button class="filtro" id="filtro-completadas">Completadas</button>
+            </div>
+            <div class="contador">
+                Tareas pendientes: <span id="contador-pendientes">0</span>
+            </div>
+        </div>
+
+        <ul id="lista-tareas">
+            </ul>
+
+        <div class="panel-gestion">
+            <button class="boton-gestion info" id="boton-exportar">
+                Exportar Tareas
+            </button>
+            <label class="boton-gestion success" for="input-importar">
+                Importar Tareas
+            </label>
+            <input type="file" id="input-importar" accept=".json">
+
+            <button class="boton-gestion danger" id="boton-eliminar-todo">
+                Eliminar Tareas
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
